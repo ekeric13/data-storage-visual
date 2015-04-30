@@ -1,0 +1,206 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: lato;
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main {
+  max-width: 100%;
+  margin:0 auto;
+  z-index: 1;
+}
+
+.data-storage {
+  text-align: center;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  transition: all 0.45s ease-out;
+  height: 64px;
+  padding: 5px;
+}
+
+.data-storage:hover {
+  background-color: white;
+  transition: all 0.45s ease-out;
+  color: #1565C0;
+  cursor: pointer;
+}
+
+.item-container {
+  margin: 30px auto;
+  text-align: center;
+  width: 85%;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+
+
+/* NestedTable CSS*/
+.nested-table-container {
+  width: 50%;
+}
+
+table {
+  font-family: "Helvetica", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", Tahoma, sans-serif;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table {
+  margin: auto;
+}
+table, td, th {
+  padding: 7px;
+  text-align: center;
+  border: 1px solid rgb(8,48,107);
+}
+th {
+  background-color: rgb(8,81,156);
+  color: white;
+}
+
+/* DataTable CSS*/
+.data-table-container{
+  width: 50%;
+}
+
+.dataTables_length label {
+  font-size: inherit;
+  color: inherit;
+}
+
+.dataTables_length select {
+  display: inherit;
+  width: inherit;
+  height: inherit;
+  border: 1px solid black;
+}
+
+.dataTables_filter label {
+  font-size: inherit;
+  color: inherit;
+}
+
+.dataTables_filter input {
+  width: inherit;
+  height: inherit;
+  font-size: inherit;
+  border: 2px inset;
+  border-color: rgb(187, 187, 187);
+  border-radius: 3px;
+
+}
+
+/* TreeMap CSS*/
+#chart, #header, #footer {
+  position: absolute;
+  top: 0;
+}
+
+#header, #footer {
+  z-index: 1;
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  text-shadow: 0 1px 0 #fff;
+}
+
+#header.inverted, #footer.inverted {
+  color: #fff;
+  text-shadow: 0 1px 4px #000;
+}
+
+#header {
+  top: 80px;
+  left: 140px;
+  width: 1000px;
+}
+
+#footer {
+  top: 400px;
+  right: 140px;
+  text-align: right;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+pre {
+  font-size: 18px;
+}
+
+line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+a:link, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+.hint {
+  position: absolute;
+  right: 0;
+  width: 1280px;
+  font-size: 12px;
+  color: #999;
+}
+
+
+.chart {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+text {
+  /*font-size: 11px;*/
+  stroke-opacity: 0;
+}
+
+rect {
+  fill: none;
+}
+
+g.cell {
+  stroke: rgb(0,0,0)
+}
+
+

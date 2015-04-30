@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>data storage visual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <!-- build:css style.css -->
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="lib/ionicons/css/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="lib/materialize/dist/css/materialize.css" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="lib/datatable.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div>
+    <div id="main">
+
+    </div>
+
+  </div>
+
+
+  <!-- build:js app.js -->
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <script src="lib/d3/d3.js"></script>
+  <script src="lib/datatable.js"></script>
+  <script src="lib/materialize/dist/js/materialize.js"></script>
+  <script src="app/bundle.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
