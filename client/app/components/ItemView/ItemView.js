@@ -31,7 +31,7 @@ var ItemView = React.createClass({
     if(this.isMounted()) {
       this.setState({ items: ItemStore.getStoreItems(), parsedItems: ItemStore.getStoreParsedItems() });
     }
-    console.log("got items from store", ItemStore.getStoreItems());
+    console.log("got items from store", this.state.items, this.state.parsedItems);
   },
 
   render: function() {
