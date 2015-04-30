@@ -4,6 +4,7 @@ var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 var ItemStore = require("../../stores/ItemStore");
 var ItemActions = require("../../actions/ItemActions");
 var NestedTable = require("./ItemViewComponents/NestedTable");
+var DataTable = require("./ItemViewComponents/DataTable");
 var TreeMap = require("./ItemViewComponents/TreeMap");
 
 
@@ -38,14 +39,23 @@ var ItemView = React.createClass({
       <NestedTable parsedItems={this.state.parsedItems} />
     );
 
+    var dataTableComp = (
+      <DataTable items={this.state.items} />
+    );
+
     var treeMapComp = (
       <TreeMap parsedItems={this.state.parsedItems} />
       );
     return (
       <div className="item-container">
         <h2 className="header"> Item View </h2>
-        <div className="nested-table-container">
-          {nestedTableComp}
+        <div className="row">
+          <div className="nested-table-container col s5 m5 l5">
+            {nestedTableComp}
+          </div>
+          <div className="data-table-container col offset-l1 offset-m1 s5 m5 l5">
+            {dataTableComp}
+          </div>
         </div>
         <div>
           {treeMapComp}

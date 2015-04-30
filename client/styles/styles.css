@@ -44,6 +44,62 @@ a:hover {
 
 
 
+/* NestedTable CSS*/
+.nested-table-container {
+  width: 50%;
+}
+
+table {
+  font-family: "Helvetica", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", Tahoma, sans-serif;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table {
+  margin: auto;
+}
+table, td, th {
+  padding: 7px;
+  text-align: center;
+  border: 1px solid rgb(8,48,107);
+}
+th {
+  background-color: rgb(8,81,156);
+  color: white;
+}
+
+/* DataTable CSS*/
+.data-table-container{
+  width: 50%;
+}
+
+.dataTables_length label {
+  font-size: inherit;
+  color: inherit;
+}
+
+.dataTables_length select {
+  display: inherit;
+  width: inherit;
+  height: inherit;
+  border: 1px solid black;
+}
+
+.dataTables_filter label {
+  font-size: inherit;
+  color: inherit;
+}
+
+.dataTables_filter input {
+  width: inherit;
+  height: inherit;
+  font-size: inherit;
+  border: 2px inset;
+  border-color: rgb(187, 187, 187);
+  border-radius: 3px;
+
+}
+
 /* TreeMap CSS*/
 #chart, #header, #footer {
   position: absolute;
@@ -148,27 +204,3 @@ g.cell {
 }
 
 
-
-/* NestedTable CSS*/
-.nested-table-container {
-  width: 50%;
-}
-
-.nested-table table {
-  font-family: "Helvetica", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", Tahoma, sans-serif;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.nested-table table {
-  margin: auto;
-}
-.nested-table table, td, th {
-  padding: 7px;
-  text-align: center;
-  border: 1px solid rgb(8,48,107);
-}
-.nested-table th {
-  background-color: rgb(8,81,156);
-  color: white;
-}
