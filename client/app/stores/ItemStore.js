@@ -14,7 +14,7 @@ var ItemStore = Reflux.createStore({
   },
 
   getStoreParsedItems: function() {
-    return this._items;
+    return this._itemsParsed;
   },
 
   getAllItems: function() {
