@@ -9,7 +9,9 @@ module.exports = {
         next(err);
       } else {
         var parsedItems = parser(items);
-        res.send(parsedItems);
+        // possibly send tuple of [items, parsedItems]
+        var itemTuple = [items, parsedItems];
+        res.send(itemTuple);
       }
     });
     function parser(items) {
