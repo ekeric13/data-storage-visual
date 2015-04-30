@@ -1,6 +1,7 @@
 node_modules/
 client/lib/*
-!client/lib/datatable/*
+!client/lib/datatable/datatable.css
+!client/lib/datatable/datatable.js
 client/app/bundle.js
 client/app/.bundle.js
 npm-debug.log
