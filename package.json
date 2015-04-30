@@ -1,0 +1,73 @@
+{
+  "name": "data-storage-visual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "watchify -o client/app/bundle.js -v -d client/app/starter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekeric13/data-storage-visual.git"
+  },
+  "author": "Eric Kennedy <ekeric13@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekeric13/data-storage-visual/issues"
+  },
+  "homepage": "https://github.com/ekeric13/data-storage-visual",
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ],
+      "envify"
+    ]
+  },
+  "devDependencies": {
+    "request": "^2.49.0"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^2.8.2",
+    "body-parser": "^1.4.3",
+    "bower": "^1.3.12",
+    "ejs": "^2.2.2",
+    "express": "^4.4.5",
+    "express-partials": "^0.3.0",
+    "jwt-simple": "^0.2.0",
+    "mongoose": "^3.8.12",
+    "morgan": "^1.1.1",
+    "q": "^1.1.2",
+    "browser-sync": "^1.7.2",
+    "browserify": "^8.1.3",
+    "envify": "^3.2.0",
+    "flux": "^2.0.1",
+    "gulp": "^3.8.10",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-minify-html": "^0.1.7",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-rev": "^2.0.1",
+    "gulp-shell": "^0.2.11",
+    "gulp-uglify": "^1.0.2",
+    "gulp-usemin": "^0.3.8",
+    "gulp-watch": "^3.0.0",
+    "jshint-stylish": "^0.2.0",
+    "require-dir": "^0.1.0",
+    "material-ui": "^0.7.3",
+    "react": "^0.12.2",
+    "react-bootstrap": "^0.17.0",
+    "react-masonry-mixin": "^0.5.6",
+    "react-router": "^0.12.4",
+    "react-tap-event-plugin": "^0.1.6",
+    "react-tools": "^0.12.2",
+    "reactify": "^1.0.0",
+    "reflux": "^0.2.5",
+    "through": "^2.3.6",
+    "watchify": "^2.3.0"
+  }
+}
