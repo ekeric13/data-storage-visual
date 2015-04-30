@@ -215,7 +215,7 @@ g.cell {
 
 
 /* responsiveness */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 
  .nested-table-container {
    width: 100%;
