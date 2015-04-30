@@ -93,24 +93,30 @@ function createTree(treeData) {
 
 var TreeMap = React.createClass({
 
+  propTypes: {
+    parsedItems: React.PropTypes.array
+  },
+
   componentDidMount: function() {
-    console.log("TreeMap mounted", this.props);
+    var jsonArray = this.props.parsedItems;
+    var tempObj = { "name": "main", "children" : jsonArray};
+    createTree(tempObj);
+    $("div.chart svg").on("mouseover", function(){
+      $("div.chart svg").css("cursor", "pointer");
+    })
   },
 
   componentDidUpdate: function() {
-    console.log("TreeMap updated", this.props);
     var jsonArray = this.props.parsedItems;
     var tempObj = { "name": "main", "children" : jsonArray};
     createTree(tempObj);
   },
 
-
-
   render: function(){
     return (
       <div>
         <h4> tree map </h4>
-        <div id="treeMap">
+        <div id="treeMap" className="tree-map">
          </div>
       </div>
     )

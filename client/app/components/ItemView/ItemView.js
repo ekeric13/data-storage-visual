@@ -29,33 +29,42 @@ var ItemView = React.createClass({
   onStoreChange: function(){
     var self = this;
     if(this.isMounted()) {
-      this.setState({ items: ItemStore.getStoreItems(), parsedItems: ItemStore.getStoreParsedItems() });
+      this.setState({ items: ItemStore.getStoreItems(), parsedItems: ItemStore.getStoreParsedItems()});
     }
     console.log("got items from store", this.state.items, this.state.parsedItems);
   },
 
   render: function() {
-    var nestedTableComp = (
-      <NestedTable parsedItems={this.state.parsedItems} />
-    );
-
-    var dataTableComp = (
-      <DataTable items={this.state.items} />
-    );
-
-    var treeMapComp = (
-      <TreeMap parsedItems={this.state.parsedItems} />
+    var nestedTableComp;
+    var dataTableComp;
+    var treeMapComp;
+    var currentParsedItems = this.state.parsedItems;
+    var currentItems = this.state.items;
+    console.log("render graphs",currentParsedItems.length > 0, currentParsedItems);
+    if (currentParsedItems.length > 0) {
+      console.log("not suppose to be here");
+      nestedTableComp = (
+        <NestedTable parsedItems={currentParsedItems} />
       );
+      treeMapComp = (
+        <TreeMap parsedItems={currentParsedItems} />
+        );
+    }
+    if (currentItems.length > 0) {
+      dataTableComp = (
+        <DataTable items={currentItems} />
+      );
+    }
+    console.log("comps",nestedTableComp, treeMapComp);
+
     return (
       <div className="item-container">
         <h2 className="header"> Item View </h2>
-        <div className="row">
-          <div className="nested-table-container col s5 m5 l5">
-            {nestedTableComp}
-          </div>
-          <div className="data-table-container col offset-l1 offset-m1 s5 m5 l5">
-            {dataTableComp}
-          </div>
+        <div className="nested-table-container">
+          {nestedTableComp}
+        </div>
+        <div className="data-table-container">
+          {dataTableComp}
         </div>
         <div>
           {treeMapComp}

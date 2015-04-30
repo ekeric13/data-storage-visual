@@ -1,5 +1,7 @@
 var React = require("react");
 
+// Reference: http://bl.ocks.org/nautat/4085017
+
 function createNestedTable(nestedTableData) {
   d3.select("#nestedTable").selectAll("table")
       .data([nestedTableData])
@@ -56,16 +58,19 @@ function createNestedTable(nestedTableData) {
 
 var NestedTable = React.createClass({
 
-  componentDidMount: function() {
+  propTypes: {
+    parsedItems: React.PropTypes.array
+  },
 
+  componentDidMount: function() {
+    var jsonArray = this.props.parsedItems;
+    createNestedTable(jsonArray);
   },
 
   componentDidUpdate: function() {
     var jsonArray = this.props.parsedItems;
     createNestedTable(jsonArray);
   },
-
-
 
   render: function(){
     return (

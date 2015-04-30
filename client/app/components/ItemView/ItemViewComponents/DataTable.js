@@ -2,8 +2,20 @@ var React = require("react");
 
 var DataTable = React.createClass({
 
-  componentDidMount: function() {
+  propTypes: {
+    items: React.PropTypes.array
+  },
 
+  componentDidMount: function() {
+    var jsonArray = this.props.items;
+    $("#itemTable").dataTable( {
+        "data": jsonArray,
+        "columns": [
+            { "data": "name" },
+            { "data": "size" }
+        ],
+
+    } );
   },
 
   componentDidUpdate: function() {
