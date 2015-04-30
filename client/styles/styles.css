@@ -147,3 +147,28 @@ g.cell {
   stroke: rgb(0,0,0)
 }
 
+
+
+/* NestedTable CSS*/
+.nested-table-container {
+  width: 50%;
+}
+
+.nested-table table {
+  font-family: "Helvetica", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", Tahoma, sans-serif;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.nested-table table {
+  margin: auto;
+}
+.nested-table table, td, th {
+  padding: 7px;
+  text-align: center;
+  border: 1px solid rgb(8,48,107);
+}
+.nested-table th {
+  background-color: rgb(8,81,156);
+  color: white;
+}
