@@ -1,8 +1,11 @@
 var React = require("react");
 
+// Reference: http://bl.ocks.org/mbostock/4063582
+
 function createTree(treeData) {
   var w = 880 - 80,
       h = 500 - 180,
+      aspect = w / h,
       x = d3.scale.linear().range([0, w]),
       y = d3.scale.linear().range([0, h]),
       color = d3.scale.category20(),
@@ -17,15 +20,17 @@ function createTree(treeData) {
 
   var svg = d3.select("#treeMap").append("div")
       .attr("class", "chart")
-      .style("width", w + "px")
-      .style("height", h + "px")
     .append("svg:svg")
       .attr("width", w)
       .attr("height", h)
+      .attr("class", "svg-chart")
     .append("svg:g")
       .attr("transform", "translate(.5,.5)");
 
-  // d3.json("flare.json", function(data) {
+  d3.select(".svg-chart")
+        .attr("viewBox", "0 0 800 320")
+        .attr("preserveAspectRatio", "xMidYMid");
+
     node = root = treeData;
 
     var nodes = treemap.nodes(root);
@@ -46,19 +51,30 @@ function createTree(treeData) {
 
     cell.append("svg:text")
         .attr("x", function(d) { return d.dx / 2; })
-        .attr("y", function(d) { var offset = d.depth*7 ; return d.dy /2; })
+        .attr("y", function(d) { var offset = d.depth*7 ; return (d.dy /2) + 3; })
         .attr("dy", function(d) { var offset = -2.0 + d.depth * 1; return offset + "em"} )
         .attr("text-anchor", "middle")
         .text(function(d) { return d.name; })
+        .style("font-size", function(d){ var offset = Math.max((12 - (d.depth * 4)), 0);  return (offset + 15) + "px" })
         .style("opacity", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? 1 : 0; });
 
     d3.select(window).on("click", function() { zoom(root); });
+
+
+
+    var chart = $(".svg-chart");
+    $(window).on("resize", function() {
+      if (window.innerWidth <= 980){
+        var targetWidth = chart.parent().width();
+        chart.attr("width", targetWidth);
+        chart.attr("height", targetWidth / aspect);
+      }
+    });
 
     d3.select("select").on("change", function() {
       treemap.value(this.value == "size" ? size : count).nodes(root);
       zoom(node);
     });
-  // });
 
   function size(d) {
     return d.size;

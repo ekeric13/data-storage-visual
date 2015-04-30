@@ -105,6 +105,10 @@ th {
 }
 
 /* TreeMap CSS*/
+.tree-map {
+  /*float: left;*/
+}
+
 #chart, #header, #footer {
   position: absolute;
   top: 0;
@@ -192,6 +196,7 @@ a:hover {
   display: block;
   margin: auto;
   margin-top: 40px;
+  transform: scale(1);
 }
 
 text {
