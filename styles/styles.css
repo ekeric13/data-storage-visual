@@ -46,7 +46,9 @@ a:hover {
 
 /* NestedTable CSS*/
 .nested-table-container {
-  width: 50%;
+  width: 45%;
+  display: inline-block;
+  margin-right: 25px;
 }
 
 table {
@@ -70,7 +72,9 @@ th {
 
 /* DataTable CSS*/
 .data-table-container{
-  width: 50%;
+  width: 45%;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 .dataTables_length label {
@@ -101,6 +105,10 @@ th {
 }
 
 /* TreeMap CSS*/
+.tree-map {
+  /*float: left;*/
+}
+
 #chart, #header, #footer {
   position: absolute;
   top: 0;
@@ -188,6 +196,7 @@ a:hover {
   display: block;
   margin: auto;
   margin-top: 40px;
+  transform: scale(1);
 }
 
 text {
@@ -201,6 +210,21 @@ rect {
 
 g.cell {
   stroke: rgb(0,0,0)
+}
+
+
+
+/* responsiveness */
+@media (max-width: 1150px) {
+
+ .nested-table-container {
+   width: 100%;
+ }
+
+ .data-table-container{
+   width: 90%;
+ }
+
 }
 
 
