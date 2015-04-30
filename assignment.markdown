@@ -65,7 +65,10 @@ Next, it would be nice to read all of this data and transform it into a tree str
 
 * Can you write an algrorithm that will output such a tree?
 * What complexity (in O notation) is the algorithm?
-<!-- O(n*m + n*2) n = number of entries, m=how far nested -->
+<!-- O(log(n) + n*m + n),
+n = number of entries,
+m=how far nested,
+log(n) is for the mongo sort so that is optional -->
 
 ### 3. Now it's time to show the data in a user-friendly way
 
