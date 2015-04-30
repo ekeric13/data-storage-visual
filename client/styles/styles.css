@@ -1,0 +1,43 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: lato;
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main {
+  max-width: 100%;
+  margin:0 auto;
+  z-index: 1;
+}
+
+.data-storage {
+  text-align: center;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  transition: all 0.45s ease-out;
+  height: 64px;
+  padding: 5px;
+}
+
+.data-storage:hover {
+  background-color: white;
+  transition: all 0.45s ease-out;
+  color: #1565C0;
+  cursor: pointer;
+}
+
+.item-container {
+  margin: 30px auto;
+  text-align: center;
+  width: 85%;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
