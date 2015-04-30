@@ -1,0 +1,26 @@
+{
+  "name": "data-storage-visual",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ekeric13/data-storage-visual",
+  "authors": [
+    "Eric Kennedy <ekeric13@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.1",
+    "jquery-cookie": "~1.4.1",
+    "d3": "3.5.5",
+    "fontawesome": "~4.3.0",
+    "materialize": "~0.95.2",
+    "ionicons": "~2.0.1"
+  }
+}
