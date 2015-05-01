@@ -1,5 +1,10 @@
 # data-storage-visual
 
+![](http://i.imgur.com/f4hU54O.png?1)
+
+![](http://i.imgur.com/XBjtVj7.png?1)
+
+
 ## Requirements
 
 - Node
